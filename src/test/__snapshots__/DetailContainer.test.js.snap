@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailContainer Should render the DetailContainer component 1`] = `
+<div
+  className="card-container-detail"
+  data-cy="card-details"
+>
+  <img
+    alt="iPhone 7phone image"
+    className="phone-image"
+    src="/images/IPhone_7.png"
+  />
+  <div
+    className="details-container"
+  >
+    <h2>
+      iPhone 7
+    </h2>
+    <p>
+      iPhone 7 dramatically improves the most important aspects of the iPhone experience. It introduces advanced new camera systems. The best performance and battery life ever in an iPhone. Immersive stereo speakers. The brightest, most colorful iPhone display. Splash and water resistance*. And it looks every bit as powerful as it is. This is iPhone 7.
+    </p>
+    <p>
+      Color: 
+      black
+    </p>
+    <p>
+      Screen: 
+      4,7 inch IPS
+    </p>
+    <p>
+      Manufacturer: 
+      Apple
+    </p>
+    <p>
+      Processor: 
+      A10 Fusion
+    </p>
+    <p>
+      Ram: 
+      2
+    </p>
+    <p>
+      Price: 
+      769
+      $
+    </p>
+    <button
+      data-cy="btn-go-back"
+      onClick={[Function]}
+    >
+       Go back
+    </button>
+  </div>
+</div>
+`;
