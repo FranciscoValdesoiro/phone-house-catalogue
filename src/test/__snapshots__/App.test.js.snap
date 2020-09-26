@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render a startup component and inizialice the store 1`] = `
+Array [
+  <header
+    className="header"
+  >
+    <div
+      className="header-inner"
+    >
+      <img
+        alt="logo"
+        src="/images/gs-logo.png"
+      />
+      <p />
+    </div>
+  </header>,
+  <div>
+    <div
+      className="phones-container"
+    >
+      <a
+        data-cy="phone_7-card"
+        href="/detail/phone_7"
+        onClick={[Function]}
+      >
+        <div
+          className="card-container"
+        >
+          <h3>
+            iPhone 7
+          </h3>
+          <div
+            className="content"
+          >
+            <img
+              alt="iPhone 7phone image"
+              className="phone-image"
+              src="/images/IPhone_7.png"
+            />
+          </div>
+          <p>
+            Click me for more details
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>,
+]
+`;
