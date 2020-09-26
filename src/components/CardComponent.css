@@ -1,0 +1,41 @@
+* { 
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color)
+}
+
+.card-container:visited {
+    color: var(--main-brand-color-visited);
+}
+
+.card-container {
+    margin: 20px auto;
+    max-width: 66%;
+    min-width: 320px;
+    color: var(--font-color);
+    border: solid 5px white;
+    background-color: white;
+    text-align: center;
+    font-size: larger;
+    box-shadow: -2px 7px 12px 0 rgba(0,0,0,.12);
+}
+
+.card-container:hover, .card-container:active {
+    border: solid 5px var(--main-brand-color);
+    color: var(--main-brand-color);
+}
+
+.content {
+    background-color: white;
+}
+
+.phone-image {
+    max-width: 310px;
+    max-height: 310px;
+    min-height: 310px;
+    
+}
+
