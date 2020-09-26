@@ -1,0 +1,49 @@
+.details-container {
+    padding: 20px;
+}
+
+button {
+    border: solid 3px var(--font-color);
+    font-size: larger;
+    padding: 5px 20px 5px 20px;
+}
+
+button:hover, button:active {
+    border: solid 3px var(--main-brand-color);
+    color: var(--main-brand-color);
+}
+
+.card-container-detail {
+    margin: 20px auto;
+    max-width: 66%;
+    min-width: 320px;
+    color: var(--font-color);
+    border: solid 5px white;
+    background-color: white;
+    text-align: center;
+    font-size: larger;
+    box-shadow: -2px 7px 12px 0 rgba(0,0,0,.12);
+    padding-bottom: 16px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .phones-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .phones-container-detail {
+        margin: 20px auto;
+        max-width: 66%;
+        min-width: 320px;
+        color: var(--font-color);
+        border: solid 5px white;
+        background-color: white;
+        text-align: center;
+        font-size: larger;
+        box-shadow: -2px 7px 12px 0 rgba(0,0,0,.12);
+        padding-bottom: 16px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-auto-rows: 1fr;
+    }
+}
