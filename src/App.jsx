@@ -1,11 +1,17 @@
 import React from 'react';
 import './App.css';
+import DetailContainer from './components/DetailContainer'
+import PhoneListContainer from './components/PhoneListContainer'
+import GuardedRoute from './components/GuardedRoute'
+import HeaderComponent from './components/HeaderComponent'
+
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import PhoneListContainer from './components/PhoneListContainer';
-import DetailContainer from './components/DetailContainer';
-import HeaderComponent from './components/HeaderComponent';
+import { useSelector} from 'react-redux'
 
 const App = () => {
+
+  const phoneSelected = useSelector(state => state.phones.PhoneSelected)
+  const isPhoneSelected = Object.keys(phoneSelected).length > 0;
 
   return (
     <Router>
@@ -14,9 +20,11 @@ const App = () => {
             <Route path="/" exact>
                 <PhoneListContainer />
             </Route>
-            <Route path="/detail/:id" exact>
-                <DetailContainer />
-            </Route>
+            <GuardedRoute 
+              auth={isPhoneSelected}
+              component={DetailContainer} 
+              path="/detail/:id"
+            />
         </Switch>
     </Router>
   );
