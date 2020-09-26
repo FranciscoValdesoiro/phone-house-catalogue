@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardComponent Should render the CardComponent  1`] = `
+<div
+  className="card-container"
+>
+  <h3>
+    Iphone 7
+  </h3>
+  <div
+    className="content"
+  >
+    <img
+      alt="Iphone 7phone image"
+      className="phone-image"
+      src="/images/iphone7.png"
+    />
+  </div>
+  <p>
+    Click me for more details
+  </p>
+</div>
+`;
