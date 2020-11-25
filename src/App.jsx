@@ -1,12 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import DetailContainer from './components/DetailContainer'
-import PhoneListContainer from './components/PhoneListContainer'
-import GuardedRoute from './components/GuardedRoute'
-import HeaderComponent from './components/HeaderComponent'
+import DetailContainer from './components/DetailContainer';
+import GuardedRoute from './components/GuardedRoute';
+import HeaderComponent from './components/HeaderComponent';
+import PhoneListContainer from './components/PhoneListContainer';
 
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import { useSelector} from 'react-redux'
 
 const App = () => {
 
@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <Router>
-        <HeaderComponent img="gs-logo.png"/>
+        <HeaderComponent img="fv-logo.png"/>
         <Switch>
             <Route path="/" exact>
                 <PhoneListContainer />
