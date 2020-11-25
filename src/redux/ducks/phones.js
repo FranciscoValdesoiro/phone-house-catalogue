@@ -1,4 +1,4 @@
-import { getFakeLatencyPhones } from '../../services/phones-service'
+import { getFakeLatencyPhones } from '../../services/phones-service';
 
 export const initialState = {
     PhoneList: [],
@@ -27,7 +27,7 @@ export default function phonesReducer(state = initialState, action){
     }
 }
 
-export const getPhonesAction = () => async (dispatch, getState) => {
+export const getPhonesAction = () => async (dispatch) => {
     try {
         const phones = await getFakeLatencyPhones()
         dispatch({
@@ -39,7 +39,7 @@ export const getPhonesAction = () => async (dispatch, getState) => {
     }
 }
 
-export const setSelectedPhoneAction = (phone) => async (dispatch, getState) => {
+export const setSelectedPhoneAction = (phone) => async (dispatch) => {
     try {
         dispatch({
             type: SET_SELECTED_PHONE,

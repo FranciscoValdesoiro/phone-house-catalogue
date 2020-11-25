@@ -1,7 +1,7 @@
-import React, {useEffect, useState, useCallback} from 'react';
-import {useDispatch, useSelector} from 'react-redux'
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { getPhonesAction, setSelectedPhoneAction } from '../redux/ducks/phones';
-import LoaderComponent from './LoaderComponent.jsx'
+import LoaderComponent from './LoaderComponent.jsx';
 import PhoneListComponent from './PhoneListComponent';
 
 
@@ -12,14 +12,11 @@ const PhoneListContainer = () => {
     const dispatch = useDispatch()
     const phones = useSelector(store => store.phones.PhoneList)
     
-    const getPhones = () => dispatch(getPhonesAction())
     const setPhone = (phone) => dispatch(setSelectedPhoneAction(phone))
     
-    const stableDispatch = useCallback(dispatch, [])
-
     useEffect(() => {
-        stableDispatch(getPhonesAction())
-    },[stableDispatch])
+        dispatch(getPhonesAction())
+    },[dispatch])
 
     useEffect(() => {
         if (phones.length > 0) {
@@ -33,7 +30,6 @@ const PhoneListContainer = () => {
     } else {
          return <PhoneListComponent
             phones={phones}
-            getPhones={getPhones}
             setPhone={setPhone}
         />
     }
